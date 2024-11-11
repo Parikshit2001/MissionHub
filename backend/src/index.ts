@@ -1,10 +1,8 @@
-import express from "express";
+import { app } from "./app";
+import dotenv from "dotenv";
 
-const app = express();
-
-app.get("/", (req, res) => {
-  res.send("Server is Healthy and Running");
-});
+// Load environment variables
+dotenv.config();
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
